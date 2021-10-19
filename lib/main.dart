@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'package:tombala/MainScreen.dart';
+import 'package:tombala/rastgeleSayi.dart';
 
 // void main() {
 //   WidgetsFlutterBinding.ensureInitialized();
@@ -11,7 +13,10 @@ import 'package:tombala/MainScreen.dart';
 // }
 
 void main() {
-    runApp(MyApp());
+  runApp(ListenableProvider<randomNumber>(
+    create: (BuildContext context) => randomNumber(),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -26,5 +31,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

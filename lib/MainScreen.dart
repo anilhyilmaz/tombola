@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:tombala/TombalaScreen.dart';
 
@@ -9,6 +11,15 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    random_function();
+
+  }
+  var gonderilecek_sayi;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TombalaScreen()));
+                      MaterialPageRoute(builder: (context) => TombalaScreen(secilen_sayi: gonderilecek_sayi,)));
                 },
               ),
             ),
@@ -46,4 +57,13 @@ class _MainScreenState extends State<MainScreen> {
 
     );
   }
+  int random_function() {
+    var p;
+    var rng3 = new Random();
+    p = rng3.nextInt(2);
+    gonderilecek_sayi = p;
+    print("secilen sayi  : $gonderilecek_sayi");
+    return gonderilecek_sayi;
+  }
 }
+
