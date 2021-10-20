@@ -13,10 +13,14 @@ import 'package:tombala/rastgeleSayi.dart';
 // }
 
 void main() {
-  runApp(ListenableProvider<randomNumber>(
-    create: (BuildContext context) => randomNumber(),
-    child: MyApp(),
-  ));
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft])
+      .then((_) {
+    runApp(ListenableProvider<randomNumber>(
+      create: (BuildContext context) => randomNumber(),
+      child: MyApp(),
+    ));
+  });
 }
 
 class MyApp extends StatelessWidget {

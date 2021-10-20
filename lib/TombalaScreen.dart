@@ -1,6 +1,7 @@
   import 'package:flutter/material.dart';
   import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:tombala/CikanSayilarScreen.dart';
 import 'package:tombala/rastgeleSayi.dart';
   import 'package:tombala/secondTicket.dart';
   import 'dart:math';
@@ -26,10 +27,7 @@ import 'package:tombala/rastgeleSayi.dart';
               ),
               Expanded(
                   flex: 1,
-                  child: Text(
-                    "Çıkan Sayılar : ${Provider.of<randomNumber>(context).myrandomnumber}",
-                    style: TextStyle(fontSize: 25),
-                  )),
+                  child: CikanSayilarScreen()),
               Expanded(
                 flex: 4,
                 child: secilen_sayi == 0 ? firstTicket() : secondTicket(),
@@ -38,7 +36,7 @@ import 'package:tombala/rastgeleSayi.dart';
                 child: Text("Raised Buton örneğii",
                   style: TextStyle(color: Colors.white),),
                 onPressed: () {
-                  // Provider.of<randomNumber>(context,listen: false).sayisec();
+                  Provider.of<randomNumber>(context,listen: false).sayisec();
                 },
               )
             ],

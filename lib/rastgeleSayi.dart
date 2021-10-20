@@ -1,16 +1,15 @@
-
 import 'dart:math';
 import 'package:flutter/cupertino.dart';
 
 class randomNumber extends ChangeNotifier{
-  int myrandomnumber = 6;
   var RandomSayiList = [];
+  late int myrandomnumber;
 
   void sayisec() {
-    var rng7 = new Random();
-    var sayisecnumber = rng7.nextInt(90);
-    print("sayi sec number: $sayisecnumber");
-    RandomSayiList.add(sayisecnumber);
+    var rng = new Random();
+    myrandomnumber = rng.nextInt(90);
+    // print("sayi sec number: $myrandomnumber");
+    RandomSayiList.add(myrandomnumber);
     notifyListeners();
   }
 }
