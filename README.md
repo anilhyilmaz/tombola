@@ -1,16 +1,3 @@
-# tombala
-
-tombola
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1634749330](https://user-images.githubusercontent.com/13693800/138138481-b05d9538-029e-4415-b6be-0a983d189d2b.png)
+![Screenshot_1634749300](https://user-images.githubusercontent.com/13693800/138138495-87602b7b-5749-4114-92da-cfa0a36b7b67.png)
+![unknown](https://user-images.githubusercontent.com/13693800/138138561-db00749e-eed4-4d5d-a767-214eff8c4433.png)
