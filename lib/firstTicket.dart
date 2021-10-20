@@ -1,7 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'globals.dart' as globals;
 
 Widget firstTicket() {
+
   int g1 = 0;
   int g2 = 0;
   int g3 = 0;
@@ -136,6 +138,7 @@ Widget firstTicket() {
     }
     if (60 >= myList3[i] && 51 <= myList3[i]) {
       g611 = myList3[i];
+
     }
     if (70 >= myList3[i] && 61 <= myList3[i]) {
       g711 = myList3[i];
@@ -147,6 +150,24 @@ Widget firstTicket() {
       g911 = myList3[i];
     }
   }
+
+  globals.ToplamList.add(g1);
+  globals.ToplamList.add(g3);
+  globals.ToplamList.add(g5);
+  globals.ToplamList.add(g7);
+  globals.ToplamList.add(g9);
+  globals.ToplamList.add(g21);
+  globals.ToplamList.add(g41);
+  globals.ToplamList.add(g51);
+  globals.ToplamList.add(g71);
+  globals.ToplamList.add(g91);
+  globals.ToplamList.add(g311);
+  globals.ToplamList.add(g411);
+  globals.ToplamList.add(g611);
+  globals.ToplamList.add(g811);
+  globals.ToplamList.add(g911);
+
+
   // ----------------------------------------------------------
 
 
@@ -158,67 +179,67 @@ Widget firstTicket() {
     children: [
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g1}")),
+        child: Center(child: Text("$g1",style: TextStyle(fontSize: 40),)),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g3}")),
+        child: Center(child: Text("$g3",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g5}")),
+        child: Center(child: Text("$g5",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g7}")),
+        child: Center(child: Text("$g7",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g9}")),
+        child: Center(child: Text("$g9",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g21}")),
+        child: Center(child: Text("$g21",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g41}")),
+        child: Center(child: Text("$g41",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g51}")),
+        child: Center(child: Text("$g51",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g71}")),
+        child: Center(child: Text("$g71",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g91}")),
+        child: Center(child: Text("$g91",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
@@ -228,29 +249,29 @@ Widget firstTicket() {
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g311}")),
+        child: Center(child: Text("$g311",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g411}")),
+        child: Center(child: Text("$g411",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g611}")),
+        child: Center(child: Text("$g611",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g811}")),
+        child: Center(child: Text("$g811",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g911}")),
+        child: Center(child: Text("$g911",style: TextStyle(fontSize: 40))),
       ),
     ],
   );

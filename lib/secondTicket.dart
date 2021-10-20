@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'globals.dart' as globals;
 Widget secondTicket() {
   int j2 = 0;
   int g1 = 0;
@@ -149,6 +150,23 @@ Widget secondTicket() {
     }
   }
 
+
+  globals.ToplamList.add(g2);
+  globals.ToplamList.add(g4);
+  globals.ToplamList.add(g6);
+  globals.ToplamList.add(g7);
+  globals.ToplamList.add(g9);
+  globals.ToplamList.add(g21);
+  globals.ToplamList.add(g31);
+  globals.ToplamList.add(g51);
+  globals.ToplamList.add(g61);
+  globals.ToplamList.add(g81);
+  globals.ToplamList.add(g111);
+  globals.ToplamList.add(g211);
+  globals.ToplamList.add(g511);
+  globals.ToplamList.add(g711);
+  globals.ToplamList.add(g811);
+
   //------------------------------------------------
 
 
@@ -163,72 +181,72 @@ Widget secondTicket() {
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g2}")),
+        child: Center(child: Text("$g2",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g4}")),
+        child: Center(child: Text("$g4",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g6}")),
+        child: Center(child: Text("$g6",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g7}")),
+        child: Center(child: Text("$g7",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g9}")),
+        child: Center(child: Text("$g9",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g21}")),
+        child: Center(child: Text("$g21",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g31}")),
+        child: Center(child: Text("$g31",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g51}")),
+        child: Center(child: Text("$g51",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g61}")),
+        child: Center(child: Text("$g61",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g81}")),
+        child: Center(child: Text("$g81",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g111}")),
+        child: Center(child: Text("$g111",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g211}")),
+        child: Center(child: Text("$g211",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,
@@ -238,18 +256,18 @@ Widget secondTicket() {
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g511}")),
+        child: Center(child: Text("$g511",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
       ),
       Container(
         color: Colors.white,
-        child: Center(child: Text("${g711}")),
+        child: Center(child: Text("$g711",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.orange,
-        child: Center(child: Text("${g811}")),
+        child: Center(child: Text("$g811",style: TextStyle(fontSize: 40))),
       ),
       Container(
         color: Colors.white,

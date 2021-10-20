@@ -7,9 +7,8 @@ class CikanSayilarScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      "Çıkan Sayılar : ${Provider.of<randomNumber>(context).RandomSayiList}",
-      style: TextStyle(fontSize: 25),
+    return Text("Çıkan Sayılar : ${Provider.of<randomNumber>(context).RandomSayiList}",
+      style: TextStyle(fontSize: 25),overflow: TextOverflow.ellipsis,softWrap: false,
     );
   }
 }
