@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:tombala/rastgeleSayi.dart';
+
+import 'globals.dart';
 
 class DogruBilinenToplamSayilar extends StatelessWidget {
   const DogruBilinenToplamSayilar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    int toplam = 0;
+
     return Row(
-      children: [Text("$toplam",style: TextStyle(fontSize: 25)),
+      children: [Text("${Provider.of<randomNumber>(context).toplam}",style: TextStyle(fontSize: 25)),
         Icon(
           Icons.favorite,
           color: Colors.pink,

@@ -10,7 +10,6 @@ import 'firstTicket.dart';
 
 class TombalaScreen extends StatelessWidget {
   var secilen_sayi;
-  var torba_sayisi;
   TombalaScreen({Key? key, this.secilen_sayi}) : super(key: key);
 
   @override
@@ -46,15 +45,7 @@ class TombalaScreen extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             onPressed: () {
-              torba_sayisi =
-                  Provider.of<randomNumber>(context, listen: false).sayisec();
-              print(torba_sayisi);
-              print(globals.ToplamList);
-              if (globals.ToplamList.contains(torba_sayisi)) {
-                print("Biletinizde çekilen numara vardır");
-              } else {
-                print("Biletinizde çekilen numara yoktur");
-              }
+                  Provider.of<randomNumber>(context, listen: false).dogruiseartir();
             },
           ),
         ],
