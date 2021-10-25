@@ -5,12 +5,25 @@ import 'package:tombala/DogruBilinenToplamSayiScreen.dart';
 import 'package:tombala/rastgeleSayi.dart';
 import 'package:tombala/secondTicket.dart';
 import 'globals.dart' as globals;
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 import 'firstTicket.dart';
 
-class TombalaScreen extends StatelessWidget {
+class TombalaScreen extends StatefulWidget {
   var secilen_sayi;
   TombalaScreen({Key? key, this.secilen_sayi}) : super(key: key);
+
+  @override
+  _TombalaScreenState createState() => _TombalaScreenState();
+}
+
+class _TombalaScreenState extends State<TombalaScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _onAlert(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,40 +50,43 @@ class TombalaScreen extends StatelessWidget {
               height: 20,
             ),
             Expanded(
-              flex: 4,
-              child: secilen_sayi == 0 ? firstTicket() : secondTicket(),
+              flex: 5,
+              child: widget.secilen_sayi == 0 ? firstTicket() : secondTicket(),
             ),
-            Expanded(
-                flex: 1,
-                child: FloatingActionButton(
-                  backgroundColor: Colors.green,
-                  onPressed: () {
-                    if (globals.i != 50) {
-                      Provider.of<randomNumber>(context, listen: false)
-                          .dogruiseartir();
-                      print("globals i : ${globals.i}");
-                    } else if (globals.toplam == 15) {
-                      AlertDialog(
-                        title: Text("Sonuçlar"),
-                        content: Text("Tebrikler TOMBOLA"),
-                      );
-                    } else {
-                      print("globals i : ${globals.i}");
-                      showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              title: Text("Sonuçlar"),
-                              content: Text(
-                                  "50 sayı çekilişinde tombala yapılamadı"),
-                            );
-                          });
-                    }
-                  },
-                ))
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          if (globals.i != 50) {
+            Provider.of<randomNumber>(context, listen: false)
+                .dogruiseartir();
+            print("globals i : ${globals.i}");
+          } else if (globals.toplam == 15) {
+            Alert(
+              context: context,
+              title: "Sonuçlar",
+              desc: "Tebrikler TOMBOLA YAPTINIZ",
+            ).show();
+          } else {
+            print("globals i : ${globals.i}");
+            Alert(
+              context: context,
+              title: "SONUÇLAR",
+              desc: "50 sayı çekilişinde tombala yapılamadı",
+            ).show();
+          }
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
+}
+
+_onAlert(context) {
+  Alert(
+    context: context,
+    title: "OYNANIŞ",
+    desc: "Flutter is more awesome with RFlutter Alert.",
+  ).show();
 }
