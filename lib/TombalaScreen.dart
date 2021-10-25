@@ -16,39 +16,60 @@ class TombalaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          SizedBox(
-            height: 40,
-          ),
-          Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.only(right: 40,left: 40,top: 20,bottom: 20),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween
-                  ,children: [
-                    CikanSayilarScreen(),
-                    DogruBilinenToplamSayilar()
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+                flex: 1,
+                child: Wrap(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Flexible(flex: 10, child: CikanSayilarScreen()),
+                        Flexible(flex: 1, child: DogruBilinenToplamSayilar()),
+                      ],
+                    )
                   ],
-                ),
-              )),
-          Expanded(
-            flex: 4,
-            child: secilen_sayi == 0 ? firstTicket() : secondTicket(),
-          ),
-          RaisedButton(
-            color: Colors.blueAccent,
-            child: Text(
-              "Torbadan Sayı Seç",
-              style: TextStyle(color: Colors.white),
+                )),
+            SizedBox(
+              height: 20,
             ),
-            onPressed: () {
-                  Provider.of<randomNumber>(context, listen: false).dogruiseartir();
-            },
-          ),
-        ],
+            Expanded(
+              flex: 4,
+              child: secilen_sayi == 0 ? firstTicket() : secondTicket(),
+            ),
+            Expanded(
+                flex: 1,
+                child: FloatingActionButton(
+                  backgroundColor: Colors.green,
+                  onPressed: () {
+                    if (globals.i != 50) {
+                      Provider.of<randomNumber>(context, listen: false)
+                          .dogruiseartir();
+                      print("globals i : ${globals.i}");
+                    } else if (globals.toplam == 15) {
+                      AlertDialog(
+                        title: Text("Sonuçlar"),
+                        content: Text("Tebrikler TOMBOLA"),
+                      );
+                    } else {
+                      print("globals i : ${globals.i}");
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text("Sonuçlar"),
+                              content: Text(
+                                  "50 sayı çekilişinde tombala yapılamadı"),
+                            );
+                          });
+                    }
+                  },
+                ))
+          ],
+        ),
       ),
     );
   }

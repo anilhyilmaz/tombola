@@ -54,7 +54,6 @@ class _MainScreenState extends State<MainScreen> {
           ],
         ),
       ),
-
     );
   }
   int random_function() {
