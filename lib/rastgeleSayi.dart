@@ -4,20 +4,31 @@ import 'globals.dart' as globals;
 
 class randomNumber extends ChangeNotifier {
   var RandomSayiList = [];
-  late int myrandomnumber;
+  var lengtofRandomSayiList = 0;
   int toplam = 0;
   var torba_sayisi;
+  var toplamCekilenSayi = 0;
+  int myrandomnumber = 0;
+  var BilinenSayilar = [];
 
 
   int sayisec() {
-    if (globals.i <50) {
+    if (globals.i <70) {
       var rng = new Random();
       myrandomnumber = rng.nextInt(90);
+      while(RandomSayiList.contains(myrandomnumber)){
+        var rng = new Random();
+        myrandomnumber = rng.nextInt(90);
+      }
       RandomSayiList.add(myrandomnumber);
+      myrandomnumber;
+      notifyListeners();
+      lengtofRandomSayiList = RandomSayiList.length;
+      notifyListeners();
       print(globals.i);
       globals.i++;
       notifyListeners();
-      print("sayi sec number: $myrandomnumber");
+      print("sayi sec number: ${myrandomnumber}");
       return myrandomnumber;
     }
     else{
@@ -26,12 +37,14 @@ class randomNumber extends ChangeNotifier {
   }
 
   void dogruiseartir() {
-    if (globals.i < 50) {
+    if (globals.i < 70) {
       torba_sayisi = sayisec();
       print(torba_sayisi);
       print(globals.ToplamList);
       if (globals.ToplamList.contains(torba_sayisi)) {
         print("Biletinizde çekilen numara vardır");
+        BilinenSayilar.add(torba_sayisi);
+        notifyListeners();
         toplam++;
         notifyListeners();
       } else {
@@ -39,7 +52,7 @@ class randomNumber extends ChangeNotifier {
       }
     }
     else{
-      print("globals.i 50den büyüktür.");
+      print("globals.i 70den büyüktür.");
     }
   }
 }

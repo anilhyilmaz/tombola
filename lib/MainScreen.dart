@@ -31,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
               margin: EdgeInsets.all(25),
               width: 140,
               child: FlatButton(
-                child: Text('Start Game', style: TextStyle(fontSize: 20.0),),
+                child: Text('Başlat', style: TextStyle(fontSize: 20.0),),
                 color: Colors.blueAccent,
                 textColor: Colors.white,
                 onPressed: () {
@@ -45,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
               margin: EdgeInsets.all(25),
               width: 140,
               child: FlatButton(
-                child: Text('Exit', style: TextStyle(fontSize: 20.0),),
+                child: Text('Çıkış', style: TextStyle(fontSize: 20.0),),
                 color: Colors.blueAccent,
                 textColor: Colors.white,
                 onPressed: () {},

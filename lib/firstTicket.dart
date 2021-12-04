@@ -171,108 +171,116 @@ Widget firstTicket() {
   // ----------------------------------------------------------
 
 
-  return GridView.count(
-    mainAxisSpacing: 3,
-    crossAxisSpacing: 5,
-    padding: EdgeInsets.all(5.0),
-    crossAxisCount: 9,
-    children: [
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g1",style: TextStyle(fontSize: 40),)),
+  return Container(
+    decoration: BoxDecoration(
+      border: Border.all(
+        color: Colors.red, //                   <--- border color
+        width: 5.0,
       ),
-      Container(
-        color: Colors.orange,
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g3",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.orange,
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g5",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.orange,
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g7",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.orange,
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g9",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.orange,
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g21",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.orange,
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g41",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.orange,
-        child: Center(child: Text("$g51",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.white,
-      ),
-      Container(
-        color: Colors.orange,
-        child: Center(child: Text("$g71",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.white,
-      ),
-      Container(
-        color: Colors.orange,
-        child: Center(child: Text("$g91",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.white,
-      ),
-      Container(
-        color: Colors.orange,
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g311",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.orange,
-        child: Center(child: Text("$g411",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.white,
-      ),
-      Container(
-        color: Colors.orange,
-        child: Center(child: Text("$g611",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.white,
-      ),
-      Container(
-        color: Colors.orange,
-        child: Center(child: Text("$g811",style: TextStyle(fontSize: 40))),
-      ),
-      Container(
-        color: Colors.white,
-        child: Center(child: Text("$g911",style: TextStyle(fontSize: 40))),
-      ),
-    ],
+    ),
+    child: GridView.count(
+      mainAxisSpacing: 3,
+      crossAxisSpacing: 5,
+      padding: EdgeInsets.all(5.0),
+      crossAxisCount: 9,
+      children: [
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g1",style: TextStyle(fontSize: 40),)),
+        ),
+        Container(
+          color: Colors.orange,
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g3",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.orange,
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g5",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.orange,
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g7",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.orange,
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g9",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.orange,
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g21",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.orange,
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g41",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.orange,
+          child: Center(child: Text("$g51",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.white,
+        ),
+        Container(
+          color: Colors.orange,
+          child: Center(child: Text("$g71",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.white,
+        ),
+        Container(
+          color: Colors.orange,
+          child: Center(child: Text("$g91",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.white,
+        ),
+        Container(
+          color: Colors.orange,
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g311",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.orange,
+          child: Center(child: Text("$g411",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.white,
+        ),
+        Container(
+          color: Colors.orange,
+          child: Center(child: Text("$g611",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.white,
+        ),
+        Container(
+          color: Colors.orange,
+          child: Center(child: Text("$g811",style: TextStyle(fontSize: 40))),
+        ),
+        Container(
+          color: Colors.white,
+          child: Center(child: Text("$g911",style: TextStyle(fontSize: 40))),
+        ),
+      ],
+    ),
   );
 }

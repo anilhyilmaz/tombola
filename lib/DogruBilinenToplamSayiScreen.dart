@@ -13,7 +13,7 @@ class DogruBilinenToplamSayilar extends StatelessWidget {
     return Row(
       children: [Text("${Provider.of<randomNumber>(context).toplam}",style: TextStyle(fontSize: 25)),
         Icon(
-          Icons.favorite,
+          Icons.check,
           color: Colors.pink,
           size: 24.0,
           semanticLabel: 'Text to announce in accessibility modes',
